@@ -22,14 +22,10 @@
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}" target="_blank">Check Out My GitHub!</a></p>
-        {% endif %}
         
-        <div>
-          <a href="{{ site.github.owner_url }}" target="_blank" title="Check Out My GitHub!"><img src="/assets/images/github.png" width="32" height="32"></a>
-          <a href="https://www.linkedin.com/in/huydngo" target="_blank" title="Check Out My LinkedIn!"><img src="/assets/images/linked.png" width="32" height="32"></a>
+        <div class="social-media">
+          <a href="{{ site.github.owner_url }}" target="_blank" title="Check Out My GitHub!"><img src="/assets/images/github.png"></a>
+          <a href="https://www.linkedin.com/in/huydngo" target="_blank" title="Check Out My LinkedIn!"><img src="/assets/images/linkedin.png"></a>
         </div>
 
       </header>
