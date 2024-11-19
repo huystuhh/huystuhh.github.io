@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-#resume {
+#resume-embed {
     width: inherit;
     height: 650px;
 }
@@ -14,7 +14,7 @@
 }
 
 @media only screen and (max-device-width: 768px){
-    #resume {
+    #resume-embed {
         display: none;
     }
 }
