@@ -12,3 +12,9 @@
     width: 32px;
     height: 32px;
 }
+
+@media only screen and (max-device-width: 768px){
+    #resume {
+        display: none;
+    }
+}
