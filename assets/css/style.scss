@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+
+#resume {
+    width: inherit;
+    height: 650px;
+}
