@@ -10,4 +10,4 @@ Thanks for checking out my resume!
 
 <a href="/assets/files/Huy Ngo - Resume.pdf" target="_blank">Huy Ngo - Resume.pdf</a>
 
-[back](./)
+[../](./)

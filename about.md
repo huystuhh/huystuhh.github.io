@@ -2,8 +2,8 @@
 layout: default
 ---
 
-## About Me
+## About
 
 _yay_
 
-[back](./)
+[../](./)
