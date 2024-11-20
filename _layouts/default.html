@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
 
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
@@ -24,6 +24,12 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
         
         <div class="social-media">
+          <a href="{{ "/" | absolute_url }}" title="Back to My Homepage!">
+            <img src="/assets/images/home.png" onmouseover="this.src='/assets/images/home-color.png';" onmouseout="this.src='/assets/images/home.png';">
+          </a>
+          <a href="mailto:huydngo@outlook.com" target="_blank" title="Send Me an Email!">
+            <img src="/assets/images/email.png" onmouseover="this.src='/assets/images/email-color.png';" onmouseout="this.src='/assets/images/email.png';">
+          </a>
           <a href="mailto:huydngo@outlook.com" target="_blank" title="Send Me an Email!">
             <img src="/assets/images/email.png" onmouseover="this.src='/assets/images/email-color.png';" onmouseout="this.src='/assets/images/email.png';">
           </a>
@@ -47,7 +53,7 @@
       <footer>
         <p>
           <small><a href="https://www.flaticon.com/free-icon/laughing_1316873" target="_blank">Favicon by justicon</a></small><br>
-          <small><a href="https://www.flaticon.com/packs/social-media-51" target="_blank">Social media icons by Freepik</a></small><br>
+          <small><a href="https://www.flaticon.com/authors/freepik" target="_blank">Social icons by Freepik</a></small><br>
           <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small>
         </p>
       </footer>
