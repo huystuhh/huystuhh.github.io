@@ -3,7 +3,7 @@ description: One of the personal websites of all time.
 email: huydngo@outlook.com
 domain: huystuhh.github.io
 url: http://huystuhh.github.io
-logo: /assets/images/temple.jpg
+logo: /assets/images/whoopie.jpg
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
