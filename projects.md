@@ -11,7 +11,7 @@ layout: default
     </div>
     <div class="project-card-content">
       <h3>OPTCG Top 8 Generator</h3>
-      <p>An image generation tool to create visually appealing tournament results with clear and concise information.</p>
+      <p>An image generation tool to create visually appealing tournament results with clear and concise information. Built on Python and JavaScript.</p>
     </div>
   </a>
 </div>
