@@ -34,11 +34,13 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    font-weight: normal;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: normal;
 }
 
 .project-card-image {
@@ -66,18 +68,13 @@
 .project-card h3 {
     margin: 0 0 10px 0;
     color: #333;
+    font-weight: 600;
 }
 
 .project-card p {
     margin: 0 0 15px 0;
     color: #666;
     line-height: 1.5;
-}
-
-.project-url {
-    color: #2196f3;
-    font-size: 0.9em;
-    text-decoration: none;
 }
 
 @media only screen and (max-device-width: 768px){
