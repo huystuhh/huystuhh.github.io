@@ -30,20 +30,38 @@ function updateSocialIcons(isDark) {
     });
 }
 
-// Toggle theme on button click
-themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark-theme');
-    const isDark = document.documentElement.classList.contains('dark-theme');
-    
+// Function to set theme
+function setTheme(isDark) {
     if (isDark) {
+        document.documentElement.classList.add('dark-theme');
         localStorage.setItem('theme', 'dark');
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'block';
         updateSocialIcons(true);
     } else {
+        document.documentElement.classList.remove('dark-theme');
         localStorage.setItem('theme', 'light');
         sunIcon.style.display = 'block';
         moonIcon.style.display = 'none';
         updateSocialIcons(false);
     }
+}
+
+// Initialize theme on page load
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Use saved theme if it exists, otherwise use system preference
+    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches);
+    setTheme(isDark);
+}
+
+// Initialize theme when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeTheme);
+
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+    const isDark = !document.documentElement.classList.contains('dark-theme');
+    setTheme(isDark);
 });
