@@ -1,6 +1,9 @@
 ---
 ---
 
+---
+---
+
 @import "{{ site.theme }}";
 
 :root {
@@ -15,7 +18,7 @@
     --link-color: #0366d6;
 }
 
-.dark-theme {
+:root.dark-theme {
     --bg-color: #1a1a1a;
     --text-color: #ffffff;
     --card-bg: #2d2d2d;
