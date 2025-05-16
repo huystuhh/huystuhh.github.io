@@ -17,7 +17,7 @@
     
     <script src="{{ "/assets/js/init.js" | relative_url }}"></script>
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -30,9 +30,7 @@
         <h1>Huy Ngo</h1>
         <h3>Software Engineer</h3>
 
-        {% if site.logo %}
-          <img src="{{ site.logo | relative_url }}" alt="Logo" />
-        {% endif %}
+        <img src="/assets/images/whoopie.jpg"/>
 
         <p>Does it smell in here or is that just me?</p>
         
@@ -87,6 +85,5 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/theme.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/transitions.js" | relative_url }}"></script>
   </body>
 </html>
