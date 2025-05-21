@@ -12,13 +12,13 @@ layout: default
     <div class="project-card-content">
       <h3>OPTCG Top 8 Generator</h3>
       <p>An image generation tool for the One Piece Trading Card Game to create visually appealing tournament results with clear and concise information! Created as a passion project for one of my favorite hobbies and being unsatisfied with the current offerings (or lack thereof).</p>
-      <p>Built with Python and JavaScript. Image generation done with Python Imaging Library (PIL), object detection and image parsing with Python-tesseract (Tesseract-OCR), automatic leader scraping with BeautifulSoup, jQuery and Boostrap for simplicity and consistent UI/UX, and deployed with Kubernetes on Google Cloud.</p>
+      <p>Built with Python and JavaScript. Image generation done with Python Imaging Library (PIL), object detection and image parsing with Python-tesseract (Tesseract-OCR), automatic leader scraping with BeautifulSoup, jQuery and Bootstrap for simplicity and consistent UI/UX, and deployed with Kubernetes on Google Cloud.</p>
     </div>
   </a>
 
   <a href="https://huydngo.dev" target="_blank" class="project-card">
     <div class="project-card-image">
-      <img src="/assets/images/whoopie.jpg" alt="https://huydngo.dev">
+      <img src="https://www.watchmojo.com/uploads/thumbs720/Fi-M-Top10-The-Lord-of-the-Rings-Characters_R1L2K1-1080p30.jpg" alt="https://huydngo.dev">
     </div>
     <div class="project-card-content">
       <h3>Placeholder</h3>
