@@ -1,0 +1,22 @@
+name: Huy Ngo
+title: Software Engineer
+bio: I'm a software engineer passionate about building great products and experiences.
+email: huydngo@outlook.com
+location: Austin, TX
+website: https://huydngo.dev
+skills:
+  - name: Frontend
+    level: 4
+  - name: Backend
+    level: 4
+  - name: DevOps
+    level: 3
+tools:
+  - name: React
+    level: 4
+  - name: Node.js
+    level: 4
+  - name: Python
+    level: 3
+  - name: AWS
+    level: 3 
