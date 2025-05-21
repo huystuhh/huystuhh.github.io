@@ -11,7 +11,8 @@ layout: default
     </div>
     <div class="project-card-content">
       <h3>OPTCG Top 8 Generator</h3>
-      <p>An image generation tool for the One Piece Trading Card Game to create visually appealing tournament results with clear and concise information. Built with Python and JavaScript. Image generation done with PIL, automatic leader scraping with BeautifulSoup, jQuery and Boostrap for simplicity and consistent UI/UX, and deployed on Kubernetes on Google Cloud.</p>
+      <p>An image generation tool for the One Piece Trading Card Game to create visually appealing tournament results with clear and concise information! Created as a passion project for one of my favorite hobbies and being unsatisfied with the current offerings (or lack thereof).</p>
+      <p>Built with Python and JavaScript. Image generation done with Python Imaging Library (PIL), object detection and image parsing with Python-tesseract (Tesseract-OCR), automatic leader scraping with BeautifulSoup, jQuery and Boostrap for simplicity and consistent UI/UX, and deployed with Kubernetes on Google Cloud.</p>
     </div>
   </a>
 
