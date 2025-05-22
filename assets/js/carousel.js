@@ -1,16 +1,4 @@
-// Immediately set theme before page renders
-(function() {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const currentTheme = localStorage.getItem('theme');
-    
-    if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-        document.documentElement.classList.add('dark-theme');
-    } else {
-        document.documentElement.classList.remove('dark-theme');
-    }
-})();
-
-// About section carousel logic
+// Carousel logic
 document.addEventListener('DOMContentLoaded', function() {
   const carousel = document.querySelector('.about-carousel');
   if (!carousel) return;
@@ -22,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let startX = null;
   let currentX = null;
   let isDragging = false;
+  let animationFrame = null;
 
   // Create navigation arrows
   const prevButton = document.createElement('button');
@@ -83,28 +72,71 @@ document.addEventListener('DOMContentLoaded', function() {
     isDragging = true;
     startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
     currentX = startX;
+    carouselImages.style.cursor = 'grabbing';
+    
+    // Cancel any ongoing animation
+    if (animationFrame) {
+      cancelAnimationFrame(animationFrame);
+    }
   }
 
   function handleDragMove(e) {
     if (!isDragging) return;
     e.preventDefault();
+    
     currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+    const diff = currentX - startX;
+    
+    // Add resistance to the drag
+    const resistance = 0.5;
+    const resistedDiff = diff * resistance;
+    
+    const activeImage = carouselImages.querySelector('.carousel-img.active');
+    activeImage.style.transform = `translateX(${resistedDiff}px)`;
   }
 
   function handleDragEnd(e) {
     if (!isDragging) return;
     isDragging = false;
+    carouselImages.style.cursor = 'grab';
     
     const diff = currentX - startX;
-    const threshold = 30; // Reduced threshold for easier swiping
+    const activeImage = carouselImages.querySelector('.carousel-img.active');
+    
+    // Smoothly animate back to center or to next/prev
+    const threshold = 50;
+    const targetX = Math.abs(diff) > threshold ? 
+      (diff > 0 ? -375 : 375) : 0;
+    
+    const startX = parseFloat(activeImage.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    const startTime = performance.now();
+    const duration = 300; // ms
 
-    if (Math.abs(diff) > threshold) {
-      if (diff > 0) {
-        prevImage();
+    function animate(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentX = startX + (targetX - startX) * easeProgress;
+      
+      activeImage.style.transform = `translateX(${currentX}px)`;
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
       } else {
-        nextImage();
+        activeImage.style.transform = '';
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            prevImage();
+          } else {
+            nextImage();
+          }
+        }
       }
     }
+    
+    animationFrame = requestAnimationFrame(animate);
   }
 
   // Event listeners
