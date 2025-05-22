@@ -45,6 +45,26 @@ h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: calc(var(--navbar-height) + 20px);
 }
 
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 2em 0 1em;
+    position: relative;
+    padding-bottom: 15px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--link-color);
+        border-radius: 2px;
+    }
+}
+
 a {
     color: var(--link-color);
 }
