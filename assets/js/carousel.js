@@ -1,6 +1,6 @@
 // Carousel logic
 document.addEventListener('DOMContentLoaded', function() {
-  const carousel = document.querySelector('.about-carousel');
+  const carousel = document.querySelector('.carousel');
   if (!carousel) return;
 
   const images = carousel.querySelectorAll('.carousel-img');

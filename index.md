@@ -2,23 +2,14 @@
 layout: default
 ---
 
-# Hello, World
+# Hello, World!
 
-Welcome to my personal site! It's constantly under construction, so please excuse the mess.
+Thank you for stopping by and welcome to my personal site! It's constantly under construction, so please excuse the mess.
 
-## <span id="about">About</span>
+If you have some time, enjoy some pictures of myself, my partner, our dog Momo, and our cat Appa. <img src="/assets/images/smile.png" alt="thanks">
 
-Hi! I'm a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.
 
-Over the years, I've been at companies of diferrent shapes and sizes. My experience spans being a technical leader, managing cloud infrastructure, and working on everything from developer platforms to large-scale data pipelines. I'm comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
-
-Outside of work, I enjoy tackling side projects that solve problems or scratch a personal itch. One of my favorites is the OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results.
-
-When I'm not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring.
-
-If you have some time, please enjoy some pictures of myself, my partner, our dog Momo, and our cat Appa.
-
-<div class="about-carousel">
+<div class="carousel">
   <div class="carousel-images">
     {% assign carousel_images = site.static_files | where_exp: "file", "file.path contains 'assets/images/carousel/'" %}
     {% assign shuffled = carousel_images | sample: carousel_images.size %}
@@ -27,6 +18,16 @@ If you have some time, please enjoy some pictures of myself, my partner, our dog
     {% endfor %}
   </div>
 </div>
+
+## <span id="about">About</span>
+
+I'm a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.
+
+Over the years, I've been at companies of diferrent shapes and sizes. My experience spans being a technical leader, managing cloud infrastructure, and working on everything from developer platforms to large-scale data pipelines. I'm comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
+
+Outside of work, I enjoy tackling side projects that solve problems or scratch a personal itch. One of my favorites is the OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results.
+
+When I'm not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring.
 
 ## <span id="projects">Projects</span>
 
@@ -55,7 +56,7 @@ If you have some time, please enjoy some pictures of myself, my partner, our dog
 
 ## <span id="resume">Resume</span>
 
-Thanks for checking out my resume!
+Thanks for checking out my resume! <img src="/assets/images/excited.png" alt="yay">
 
 <embed id="resume-embed" src="/assets/files/Huy Ngo - Resume.pdf" type="application/pdf">
 
