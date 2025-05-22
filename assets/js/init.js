@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let startX = null;
   let currentX = null;
   let isDragging = false;
+  let animationFrame = null;
 
   // Create navigation arrows
   const prevButton = document.createElement('button');
@@ -32,13 +33,38 @@ document.addEventListener('DOMContentLoaded', function() {
   nextButton.className = 'carousel-nav next';
   nextButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
 
+  // Create dots indicator
+  const dotsContainer = document.createElement('div');
+  dotsContainer.className = 'carousel-dots';
+  const dots = [];
+
+  for (let i = 0; i < images.length; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'carousel-dot';
+    dot.addEventListener('click', () => {
+      current = i;
+      showImage(current);
+      updateDots();
+    });
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+  }
+
   carousel.appendChild(prevButton);
   carousel.appendChild(nextButton);
+  carousel.appendChild(dotsContainer);
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
 
   function showImage(idx) {
     images.forEach((img, i) => {
       img.classList.toggle('active', i === idx);
     });
+    updateDots();
   }
 
   function nextImage() {
@@ -59,15 +85,26 @@ document.addEventListener('DOMContentLoaded', function() {
     startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
     currentX = startX;
     carouselImages.style.cursor = 'grabbing';
+    
+    // Cancel any ongoing animation
+    if (animationFrame) {
+      cancelAnimationFrame(animationFrame);
+    }
   }
 
   function handleDragMove(e) {
     if (!isDragging) return;
     e.preventDefault();
+    
     currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
     const diff = currentX - startX;
+    
+    // Add resistance to the drag
+    const resistance = 0.5;
+    const resistedDiff = diff * resistance;
+    
     const activeImage = carouselImages.querySelector('.carousel-img.active');
-    activeImage.style.transform = `translateX(${diff}px)`;
+    activeImage.style.transform = `translateX(${resistedDiff}px)`;
   }
 
   function handleDragEnd(e) {
@@ -77,15 +114,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const diff = currentX - startX;
     const activeImage = carouselImages.querySelector('.carousel-img.active');
-    activeImage.style.transform = '';
+    
+    // Smoothly animate back to center or to next/prev
+    const threshold = 50;
+    const targetX = Math.abs(diff) > threshold ? 
+      (diff > 0 ? -375 : 375) : 0;
+    
+    const startX = parseFloat(activeImage.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    const startTime = performance.now();
+    const duration = 300; // ms
 
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        prevImage();
+    function animate(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentX = startX + (targetX - startX) * easeProgress;
+      
+      activeImage.style.transform = `translateX(${currentX}px)`;
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
       } else {
-        nextImage();
+        activeImage.style.transform = '';
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            prevImage();
+          } else {
+            nextImage();
+          }
+        }
       }
     }
+    
+    animationFrame = requestAnimationFrame(animate);
   }
 
   // Event listeners
