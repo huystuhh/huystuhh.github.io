@@ -2,18 +2,35 @@
 layout: default
 ---
 
-<span id="welcome"></span>
-Welcome to my personal site! It's still under construction, so please excuse the mess.
+# Hello, World
+
+Welcome to my personal site! It's constantly under construction, so please excuse the mess.
 
 ![Temple](/assets/images/temple.jpg)
 
-<span id="about"></span>
-## About
+## <span id="about">About</span>
 
-_yay_
+Hi! I’m a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.
 
-<span id="projects"></span>
-## Projects
+Over the years, I’ve worked as a Senior Software Engineer at companies like Community Tech Alliance, MyFitnessPal, Under Armour, and IBM. My experience spans leading teams, managing cloud infrastructure (especially with AWS and GCP), and building everything from developer platforms to large-scale data pipelines. I’m comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
+
+Outside of work, I enjoy building side projects that solve real problems or just scratch a personal itch. One of my favorites is the OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results. I’m always tinkering with new ideas, whether it’s automating something with Python or experimenting with cloud deployments.
+
+When I’m not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring!
+
+<div class="about-carousel">
+  <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+  <div class="carousel-images">
+    {% assign carousel_images = site.static_files | where_exp: "file", "file.path contains 'assets/images/carousel/'" %}
+    {% assign shuffled = carousel_images | sample: carousel_images.size %}
+    {% for image in shuffled %}
+      <img src="{{ image.path }}" alt="About image" class="carousel-img{% if forloop.first %} active{% endif %}">
+    {% endfor %}
+  </div>
+  <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+</div>
+
+## <span id="projects">Projects</span>
 
 <div class="project-cards">
   <a href="https://optcg.top" target="_blank" class="project-card">
@@ -38,8 +55,7 @@ _yay_
   </a>
 </div>
 
-<span id="resume"></span>
-## Resume
+## <span id="resume">Resume</span>
 
 Thanks for checking out my resume!
 
