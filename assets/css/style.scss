@@ -211,6 +211,7 @@ a {
 
 .carousel-images {
   overflow: hidden;
+  height: 500px;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
   display: flex;
@@ -225,9 +226,6 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .carousel-img.active {
