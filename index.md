@@ -6,8 +6,6 @@ layout: default
 
 Welcome to my personal site! It's constantly under construction, so please excuse the mess.
 
-![Temple](/assets/images/temple.jpg)
-
 ## <span id="about">About</span>
 
 Hi! I'm a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.

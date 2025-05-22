@@ -212,7 +212,7 @@ a {
 
 .carousel-images {
   width: 375px;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
@@ -220,6 +220,12 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  touch-action: pan-y pinch-zoom;
+  cursor: grab;
+}
+
+.carousel-images:active {
+  cursor: grabbing;
 }
 
 .carousel-img {
@@ -228,9 +234,11 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  transition: opacity 0.4s;
+  transition: transform 0.3s ease-out;
   position: absolute;
   left: 0; top: 0;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .carousel-img.active {
@@ -238,4 +246,52 @@ a {
   position: relative;
   opacity: 1;
   z-index: 2;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: var(--card-bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px var(--card-shadow);
+  z-index: 3;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-nav:hover {
+  opacity: 1;
+}
+
+.carousel-nav.prev {
+  left: -20px;
+}
+
+.carousel-nav.next {
+  right: -20px;
+}
+
+.carousel-nav svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .carousel-nav {
+    display: none;
+  }
+  
+  .carousel-images {
+    width: 100%;
+    max-width: 375px;
+  }
 }
