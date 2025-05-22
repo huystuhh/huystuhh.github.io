@@ -205,13 +205,11 @@ a {
   align-items: center;
   justify-content: center;
   margin: 2em auto;
-  max-width: 500px;
   position: relative;
   gap: 10px;
 }
 
 .carousel-images {
-  max-width: 500px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
@@ -228,7 +226,8 @@ a {
   object-fit: cover;
   border-radius: 12px;
   position: absolute;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
 }
 
 .carousel-img.active {
