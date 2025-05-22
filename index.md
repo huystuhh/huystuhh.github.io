@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Hello, World!
+# <span id="home">Hello, World!</span>
 
 Thank you for stopping by and welcome to my personal site! It's constantly under construction, so please excuse the mess.
 
