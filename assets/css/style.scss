@@ -211,8 +211,7 @@ a {
 }
 
 .carousel-images {
-  width: 375px;
-  height: 500px;
+  max-width: 500px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
