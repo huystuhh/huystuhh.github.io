@@ -6,7 +6,7 @@ layout: default
 
 Thank you for stopping by and welcome to my personal site! It's constantly under construction, so please excuse the mess.
 
-If you have some time, enjoy some pictures of myself, my partner, our dog Momo, and our cat Appa. <img src="/assets/images/smile.png" alt="thanks">
+If you have some time, enjoy some pictures of myself, my partner, our dog Momo, and our cat Appa. ☺️
 
 
 <div class="carousel">
@@ -56,7 +56,7 @@ When I'm not coding, you might find me volunteering, playing disc golf, basketba
 
 ## <span id="resume">Resume</span>
 
-Thanks for checking out my resume! <img src="/assets/images/excited.png" alt="yay">
+Thanks for checking out my resume! 🙇🏻‍♂️
 
 <embed id="resume-embed" src="/assets/files/Huy Ngo - Resume.pdf" type="application/pdf">
 

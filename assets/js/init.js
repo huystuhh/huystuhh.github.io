@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentX = null;
   let isDragging = false;
 
+  // Remove any existing navigation elements
+  const existingNav = carousel.querySelector('.carousel-nav');
+  const existingDots = carousel.querySelector('.carousel-dots');
+  if (existingNav) existingNav.remove();
+  if (existingDots) existingDots.remove();
+
   // Create navigation arrows
   const prevButton = document.createElement('button');
   prevButton.className = 'carousel-nav prev';
