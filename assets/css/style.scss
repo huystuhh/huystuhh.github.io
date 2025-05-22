@@ -211,8 +211,8 @@ a {
 }
 
 .carousel-images {
-  width: 350px;
-  height: 220px;
+  width: 375px;
+  height: 400px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
@@ -238,21 +238,4 @@ a {
   position: relative;
   opacity: 1;
   z-index: 2;
-}
-
-.carousel-btn {
-  background: var(--card-bg);
-  border: none;
-  font-size: 2em;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 40px; height: 40px;
-  box-shadow: 0 2px 4px var(--card-shadow);
-  transition: background 0.2s;
-  z-index: 3;
-}
-
-.carousel-btn:hover {
-  background: var(--link-color);
-  color: #fff;
 }

@@ -14,10 +14,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('.about-carousel .carousel-img');
-  const prevBtn = document.querySelector('.about-carousel .prev');
-  const nextBtn = document.querySelector('.about-carousel .next');
   if (!images.length) return;
   let current = 0;
+  let interval = null;
 
   function showImage(idx) {
     images.forEach((img, i) => {
@@ -25,17 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + images.length) % images.length;
-    showImage(current);
-  });
-
-  nextBtn.addEventListener('click', () => {
+  function nextImage() {
     current = (current + 1) % images.length;
     showImage(current);
-  });
+  }
 
-  // Optional: swipe support for mobile
+  // Auto-advance every 3 seconds
+  function startCarousel() {
+    if (interval) clearInterval(interval);
+    interval = setInterval(nextImage, 3000);
+  }
+
+  // Swipe support for mobile
   let startX = null;
   const carousel = document.querySelector('.about-carousel .carousel-images');
   if (carousel) {
@@ -43,9 +43,19 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.addEventListener('touchend', e => {
       if (startX === null) return;
       let endX = e.changedTouches[0].clientX;
-      if (endX - startX > 50) prevBtn.click();
-      if (startX - endX > 50) nextBtn.click();
+      if (endX - startX > 50) {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+        startCarousel();
+      }
+      if (startX - endX > 50) {
+        nextImage();
+        startCarousel();
+      }
       startX = null;
     });
   }
+
+  showImage(current);
+  startCarousel();
 });

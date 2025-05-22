@@ -10,16 +10,17 @@ Welcome to my personal site! It's constantly under construction, so please excus
 
 ## <span id="about">About</span>
 
-Hi! I’m a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.
+Hi! I'm a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.
 
-Over the years, I’ve worked as a Senior Software Engineer at companies like Community Tech Alliance, MyFitnessPal, Under Armour, and IBM. My experience spans leading teams, managing cloud infrastructure (especially with AWS and GCP), and building everything from developer platforms to large-scale data pipelines. I’m comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
+Over the years, I've been at companies of diferrent shapes and sizes. My experience spans being a technical leader, managing cloud infrastructure, and working on everything from developer platforms to large-scale data pipelines. I'm comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
 
-Outside of work, I enjoy building side projects that solve real problems or just scratch a personal itch. One of my favorites is the OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results. I’m always tinkering with new ideas, whether it’s automating something with Python or experimenting with cloud deployments.
+Outside of work, I enjoy tackling side projects that solve problems or scratch a personal itch. One of my favorites is the OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results.
 
-When I’m not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring!
+When I'm not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring.
+
+If you have some time, please enjoy some pictures of myself, my partner, our dog Momo, and our cat Appa.
 
 <div class="about-carousel">
-  <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
   <div class="carousel-images">
     {% assign carousel_images = site.static_files | where_exp: "file", "file.path contains 'assets/images/carousel/'" %}
     {% assign shuffled = carousel_images | sample: carousel_images.size %}
@@ -27,7 +28,6 @@ When I’m not coding, you might find me volunteering, playing disc golf, basket
       <img src="{{ image.path }}" alt="About image" class="carousel-img{% if forloop.first %} active{% endif %}">
     {% endfor %}
   </div>
-  <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
 </div>
 
 ## <span id="projects">Projects</span>
