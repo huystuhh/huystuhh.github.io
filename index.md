@@ -2,17 +2,18 @@
 layout: default
 ---
 
-## <span id="welcome">Hello, World!</span>
-
+<span id="welcome"></span>
 Welcome to my personal site! It's still under construction, so please excuse the mess.
 
 ![Temple](/assets/images/temple.jpg)
 
-## <span id="about">About</span>
+<span id="about"></span>
+## About
 
 _yay_
 
-## <span id="projects">Projects</span>
+<span id="projects"></span>
+## Projects
 
 <div class="project-cards">
   <a href="https://optcg.top" target="_blank" class="project-card">
@@ -37,7 +38,8 @@ _yay_
   </a>
 </div>
 
-## <span id="resume">Resume</span>
+<span id="resume"></span>
+## Resume
 
 Thanks for checking out my resume!
 
