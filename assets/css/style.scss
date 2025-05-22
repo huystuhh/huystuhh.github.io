@@ -37,7 +37,11 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    padding-top: var(--navbar-height);
+    padding-top: calc(var(--navbar-height) + 20px);
+}
+
+.wrapper {
+    padding-top: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
