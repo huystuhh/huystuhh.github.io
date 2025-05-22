@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+/* ==========================================================================
+   Theme Variables
+   ========================================================================== */
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
@@ -30,6 +33,9 @@
     --border-color: #404040;
 }
 
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
 html {
     scroll-behavior: smooth;
 }
@@ -40,10 +46,7 @@ body {
     padding-top: calc(var(--navbar-height) + 20px);
 }
 
-.wrapper {
-    padding-top: 20px;
-}
-
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
     scroll-margin-top: calc(var(--navbar-height) + 20px);
@@ -73,14 +76,15 @@ a {
     color: var(--link-color);
 }
 
-#resume-embed {
-    width: inherit;
-    height: 650px;
+section {
+    border-top: none;
 }
 
-.social-media img {
-    width: 32px;
-    height: 32px;
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+.wrapper {
+    padding-top: 20px;
 }
 
 .nav-bar {
@@ -109,6 +113,10 @@ a {
     }
 }
 
+/* ==========================================================================
+   UI Components
+   ========================================================================== */
+/* Theme Toggle */
 .theme-toggle {
     position: fixed;
     bottom: 20px;
@@ -121,19 +129,20 @@ a {
     box-shadow: 0 2px 4px var(--card-shadow);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     z-index: 1000;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--card-hover-shadow);
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        color: var(--text-color);
+    }
 }
 
-.theme-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--card-hover-shadow);
-}
-
-.theme-toggle svg {
-    width: 24px;
-    height: 24px;
-    color: var(--text-color);
-}
-
+/* Project Cards */
 .project-cards {
     display: flex;
     flex-wrap: wrap;
@@ -152,12 +161,24 @@ a {
     color: inherit;
     cursor: pointer;
     font-weight: normal;
-}
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px var(--card-hover-shadow);
-    font-weight: normal;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px var(--card-hover-shadow);
+        font-weight: normal;
+    }
+
+    h3 {
+        margin: 0 0 10px 0;
+        color: var(--heading-color);
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0 0 15px 0;
+        color: var(--paragraph-color);
+        line-height: 1.5;
+    }
 }
 
 .project-card-image {
@@ -165,13 +186,13 @@ a {
     height: 200px;
     overflow: hidden;
     background-color: var(--image-bg);
-}
 
-.project-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 .project-card:hover .project-card-image img {
@@ -182,116 +203,116 @@ a {
     padding: 20px;
 }
 
-.project-card h3 {
-    margin: 0 0 10px 0;
-    color: var(--heading-color);
-    font-weight: 600;
-}
-
-.project-card p {
-    margin: 0 0 15px 0;
-    color: var(--paragraph-color);
-    line-height: 1.5;
-}
-
-@media only screen and (max-device-width: 768px){
-    #resume-embed {
-        display: none;
-    }
-}
-
+/* Carousel */
 .carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2em auto;
-  position: relative;
-  gap: 10px;
+    margin: 2em auto;
+    position: relative;
+    gap: 10px;
 }
 
 .carousel-images {
-  overflow: hidden;
-  height: 500px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px var(--card-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    overflow: hidden;
+    max-height: 650px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .carousel-img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 
-.carousel-img.active {
-  display: block;
-  position: relative;
-  opacity: 1;
-  z-index: 2;
+    &.active {
+        display: block;
+        position: relative;
+        opacity: 1;
+        z-index: 2;
+    }
 }
 
 .carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: var(--card-bg);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px var(--card-shadow);
-  z-index: 3;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--card-bg);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    z-index: 3;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.prev {
+        left: -20px;
+    }
+
+    &.next {
+        right: -20px;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        color: var(--text-color);
+    }
 }
 
-.carousel-nav:hover {
-  opacity: 1;
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.social-media img {
+    width: 32px;
+    height: 32px;
 }
 
-.carousel-nav.prev {
-  left: -20px;
+#resume-embed {
+    width: inherit;
+    height: 650px;
 }
 
-.carousel-nav.next {
-  right: -20px;
-}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-device-width: 768px) {
+    #resume-embed {
+        display: none;
+    }
 
-.carousel-nav svg {
-  width: 24px;
-  height: 24px;
-  color: var(--text-color);
-}
+    .carousel-images {
+        width: 100%;
+    }
+    
+    .carousel-nav {
+        width: 36px;
+        height: 36px;
 
-@media (max-width: 768px) {
-  .carousel-images {
-    width: 100%;
-  }
-  
-  .carousel-nav {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .carousel-nav.prev {
-    left: 10px;
-  }
-  
-  .carousel-nav.next {
-    right: 10px;
-  }
-  
-  .carousel-nav svg {
-    width: 20px;
-    height: 20px;
-  }
+        &.prev {
+            left: 10px;
+        }
+        
+        &.next {
+            right: 10px;
+        }
+        
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }
