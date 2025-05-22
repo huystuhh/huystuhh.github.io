@@ -208,7 +208,6 @@ a {
   max-width: 500px;
   position: relative;
   gap: 10px;
-  flex-direction: column;
 }
 
 .carousel-images {
@@ -221,12 +220,6 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
-  touch-action: pan-y pinch-zoom;
-  cursor: grab;
-}
-
-.carousel-images:active {
-  cursor: grabbing;
 }
 
 .carousel-img {
@@ -235,12 +228,8 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   left: 0; top: 0;
-  user-select: none;
-  -webkit-user-drag: none;
-  will-change: transform;
 }
 
 .carousel-img.active {
@@ -248,27 +237,6 @@ a {
   position: relative;
   opacity: 1;
   z-index: 2;
-}
-
-.carousel-dots {
-  display: flex;
-  gap: 8px;
-  margin-top: 16px;
-  justify-content: center;
-}
-
-.carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--card-shadow);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.carousel-dot.active {
-  background: var(--link-color);
-  transform: scale(1.2);
 }
 
 .carousel-nav {
@@ -309,12 +277,26 @@ a {
 }
 
 @media (max-width: 768px) {
-  .carousel-nav {
-    display: none;
-  }
-  
   .carousel-images {
     width: 100%;
     max-width: 375px;
+  }
+  
+  .carousel-nav {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .carousel-nav.prev {
+    left: 10px;
+  }
+  
+  .carousel-nav.next {
+    right: 10px;
+  }
+  
+  .carousel-nav svg {
+    width: 20px;
+    height: 20px;
   }
 }
