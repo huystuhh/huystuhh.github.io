@@ -49,8 +49,8 @@ When I'm not coding, you might find me volunteering, playing disc golf, basketba
     </div>
     <div class="project-card-content">
       <h3>Watermarkn't</h3>
-      <p>A simple Python application to remove watermark text from an image. I developed this as a side project for my own personal use case (related to the OPTCG Top 8 Generator above) and not for financial or commercial use.</p>
-      <p>It currently uses OpenCV and inpainting to naively try and remove the watermark and unfortunately does not do it very well. The most successful watermark removal tools use AI/ML to re-draw the image after the watermark has been removed, which is my future goal for improving this application.</p>
+      <p>A Python application to remove watermark text from an image. I developed this as a side project for my own personal use, not intended for financial or commercial use.</p>
+      <p>It uses OpenCV and inpainting to naively try and remove the watermark and unfortunately does not do it very well. The most successful watermark removal tools use AI/ML to re-draw the image after the watermark has been removed, which is my future goal for improving it</p>
       <p>Note: banner image for this project card is from Shutterstock.</p>
     </div>
   </a>
