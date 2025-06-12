@@ -21,11 +21,11 @@ If you have some time, enjoy some pictures of myself, my partner, our dog Momo, 
 
 ## <span id="about">About</span>
 
-I'm a software engineer based in Austin, TX who enjoys learning new technologies and upskilling. I pride myself on being adaptable and a jack-of-all-trades, always eager to take on new challenges and grow throughout my career.
+Hi there! My name is Huy. I'm a software engineer based in Austin, TX who enjoys tackling challenging problems and learning new technologies. I pride myself on being adaptable and a jack-of-all-trades, always eager to grow my skillset.
 
 Over the years, I've been at companies of different shapes and sizes. My experience spans being a technical leader, managing cloud infrastructure, full-stack engineering, and working on everything from developer platforms to data pipelines. I'm comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
 
-Outside of work, I enjoy tackling side projects that solve problems and/or scratch a personal itch. One such project is my OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results that emphasizes a simple UI, easy to use UX, and QOL features. 
+I enjoy tackling side projects that solve problems and/or scratch a personal itch. One such project is my OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results that emphasizes a simple UI, easy to use UX, and QOL features.
 
 When I'm not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring.
 
@@ -38,7 +38,7 @@ When I'm not coding, you might find me volunteering, playing disc golf, basketba
     </div>
     <div class="project-card-content">
       <h3>OPTCG Top 8 Generator</h3>
-      <p>An image generation tool for the One Piece Trading Card Game to create visually appealing tournament results with clear and concise information! Created as a passion project for one of my favorite hobbies and being unsatisfied with the current offerings (or lack thereof).</p>
+      <p>An image generation application for the One Piece Trading Card Game to create visually appealing tournament results with clear and concise information! Created as a passion project for one of my favorite hobbies and being unsatisfied with the current offerings.</p>
       <p>Built with Python and JavaScript. Image generation done with Python Imaging Library (PIL), object detection and image parsing with Python-tesseract (Tesseract-OCR), automatic leader scraping with BeautifulSoup, jQuery and Bootstrap for simplicity and consistent UI/UX, and deployed with Kubernetes on Google Cloud.</p>
     </div>
   </a>
@@ -48,9 +48,9 @@ When I'm not coding, you might find me volunteering, playing disc golf, basketba
       <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3NodXR0ZXJzdG9jay0yMjU5MDc0MDQ5LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODI4fX19">
     </div>
     <div class="project-card-content">
-      <h3>Watermarkn't</h3>
-      <p>A Python application to remove watermark text from an image. I developed this as a side project for my own personal use, not intended for financial or commercial use.</p>
-      <p>It uses OpenCV and inpainting to naively try and remove the watermark and unfortunately does not do it very well. The most successful watermark removal tools use AI/ML to re-draw the image after the watermark has been removed, which is my future goal for improving it</p>
+      <h3>Watermarkn't</h3>.
+      <p>A tool to remove watermark text from an image. I developed this as a side project for my own personal use, not intended for financial or commercial use.</p>
+      <p>Built with Python, it uses OpenCV and inpainting to naively try and remove the watermark and unfortunately does not do it very well. The most successful watermark removal tools use AI/ML to re-draw the image after the watermark has been removed, which is my future goal for improving it.</p>
       <p>Note: banner image for this project card is from Shutterstock.</p>
     </div>
   </a>
