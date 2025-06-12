@@ -6,7 +6,7 @@ layout: default
 
 Thank you for stopping by and welcome to my personal site! It's constantly under construction, so please excuse the mess.
 
-If you have some time, enjoy some pictures of myself, my partner, our dog Momo, and our cat Appa. ☺️
+If you have some time, feel free to look through pictures of myself, my partner, our dog Momo, and our cat Appa. ☺️
 
 
 <div class="carousel">
@@ -23,9 +23,9 @@ If you have some time, enjoy some pictures of myself, my partner, our dog Momo, 
 
 Hi there! My name is Huy. I'm a software engineer based in Austin, TX who enjoys tackling challenging problems and learning new technologies. I pride myself on being adaptable and a jack-of-all-trades, always eager to grow my skillset.
 
-Over the years, I've been at companies of different shapes and sizes. My experience spans being a technical leader, managing cloud infrastructure, full-stack engineering, and working on everything from developer platforms to data pipelines. I'm comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I love collaborating across teams, mentoring others, and making sure systems are reliable, scalable, and secure.
+Over the years, I've been at companies of different shapes and sizes. My experience spans being a technical leader, managing cloud infrastructure, full-stack engineering, and working on everything from developer platforms to data pipelines. I'm comfortable with Python, JavaScript/TypeScript, Terraform, Kubernetes, and a wide range of DevOps and data engineering tools. I like to collaborate across teams, mentor and be mentored, and make sure that systems are reliable, scalable, and secure.
 
-I enjoy tackling side projects that solve problems and/or scratch a personal itch. One such project is my OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results that emphasizes a simple UI, easy to use UX, and QOL features.
+In my side projects, I try to solve problems that scratch a personal itch. One such project is my OPTCG Top 8 Generator, a tool for the One Piece Trading Card Game community that helps create visually appealing tournament results that emphasizes a simple UI, easy to use UX, and QOL features.
 
 When I'm not coding, you might find me volunteering, playing disc golf, basketball, or tennis, or getting into a good board/card/video game. I also love reading, crocheting, collecting pins, and exploring new places and adventuring.
 
