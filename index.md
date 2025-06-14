@@ -48,7 +48,7 @@ When I'm not coding, you might find me volunteering, playing disc golf, basketba
       <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3NodXR0ZXJzdG9jay0yMjU5MDc0MDQ5LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODI4fX19">
     </div>
     <div class="project-card-content">
-      <h3>Watermarkn't</h3>.
+      <h3>Watermarkn't</h3>
       <p>A tool to remove watermark text from an image. I developed this as a side project for my own personal use, not intended for financial or commercial use.</p>
       <p>Built with Python, it uses OpenCV and inpainting to naively try and remove the watermark and unfortunately does not do it very well. The most successful watermark removal tools use AI/ML to re-draw the image after the watermark has been removed, which is my future goal for improving it.</p>
       <p>Note: banner image for this project card is from Shutterstock.</p>
